@@ -1,0 +1,33 @@
+/* ./src/styles.css */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background: #eee;
+  display: flex;
+  color: #333;
+  background-image: linear-gradient(
+    174deg,
+    #ffd370 2%,
+    #ffd370 46%,
+    #ffffff 46%,
+    #ffffff 100%,
+    #e8e8e8 100%
+  );
+  letter-spacing: 0.07em;
+}
+
+ul {
+  padding: 0;
+}
