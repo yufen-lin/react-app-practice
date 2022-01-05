@@ -1,7 +1,5 @@
-import { useState } from "react";
-import styled from "styled-components";
+import React, { useState } from "react";
 import Tabs from "./Tabs";
-import StyleTodoItem from "./TodoItem";
 import {
   EmptyListHint,
   TodoInput,
@@ -34,20 +32,23 @@ const Todo = () => {
   const [value, setValue] = useState("");
   // 目前頁籤
   const [activeTab, setActiveTab] = useState("all");
+  const tempTodos = JSON.parse(JSON.stringify(todos));
 
   // 新增待辦事項
   const addTodo = (e) => {
     if (e.key === "Enter") {
       // 把要新增的事項放入待辦清單陣列中
-      const newTodo = {
-        id: Math.floor(Math.random() * 10000),
-        content: value,
-        isChecked: false,
-      };
-      setTodos([newTodo, ...todos]);
+      if (value.trim() !== "") {
+        const newTodo = {
+          id: Math.floor(Math.random() * 10000),
+          content: value,
+          isChecked: false,
+        };
+        setTodos([newTodo, ...todos]);
 
-      // 新增完 todo 後清空 value
-      setValue("");
+        // 新增完 todo 後清空 value
+        setValue("");
+      }
     }
   };
 
@@ -58,17 +59,17 @@ const Todo = () => {
 
   // 刪除待辦事項
   const handleDeleteTodo = (id) => {
-    setTodos(todos.filter((todo) => todo.id !== id));
+    setTodos(tempTodos.filter((todo) => todo.id !== id));
   };
 
   // 清除所有已完成的事項
   const handleDeleteAllDoneTodo = () => {
-    setTodos(todos.filter((todo) => todo.isChecked === false));
+    setTodos(tempTodos.filter((todo) => todo.isChecked === false));
   };
 
   // 修改事項完成狀態
   const handleChecked = (todo) => {
-    const updateTodos = todos.map((item) => {
+    const updateTodos = tempTodos.map((item) => {
       if (item.id === todo.id) {
         item.isChecked = !item.isChecked;
       }
@@ -86,18 +87,18 @@ const Todo = () => {
   const filterTodoList = (activeTab) => {
     let filterList = [];
     if (activeTab === "doing") {
-      filterList = todos.filter((todo) => todo.isChecked === false);
+      filterList = tempTodos.filter((todo) => todo.isChecked === false);
     } else if (activeTab === "done") {
-      filterList = todos.filter((todo) => todo.isChecked === true);
+      filterList = tempTodos.filter((todo) => todo.isChecked === true);
     } else {
-      filterList = todos;
+      filterList = tempTodos;
     }
     return filterList;
   };
 
   // 計算目前待完成項目數量
   const computeListNum = () => {
-    const list = todos.filter((todo) => todo.isChecked === false);
+    const list = tempTodos.filter((todo) => todo.isChecked === false);
     return list.length;
   };
 
@@ -115,7 +116,7 @@ const Todo = () => {
         onChange={handleInputChange}
         onKeyDown={addTodo}
       />
-      <TodoCard>
+      <TodoCard isEmpty={todos.length === 0}>
         <Tabs
           activeTab={activeTab}
           changeTab={handleTabChanged}
@@ -130,19 +131,19 @@ const Todo = () => {
               handleDelete={handleDeleteTodo}
             />
           ))}
-          <EmptyListHint isEmpty={todos.length === 0}>
-            <p>
-              未有待辦事項，請由上方輸入
-              <br />
-              輸入完成後按Enter即可將項目加入清單
-            </p>
-          </EmptyListHint>
         </TodosList>
         <StyledCardFooter
           todosNum={computeListNum()}
           handleDeleteAllDoneTodo={handleDeleteAllDoneTodo}
         />
       </TodoCard>
+      <EmptyListHint isEmpty={todos.length === 0}>
+        <p>
+          未有待辦事項，請由上方輸入
+          <br />
+          輸入完成後按Enter即可將項目加入清單
+        </p>
+      </EmptyListHint>
     </div>
   );
 };

@@ -49,12 +49,18 @@ const weatherIcons = {
 };
 
 const IconContainer = styled.div`
+  width: 10rem;
+  margin: 0.8rem 0;
   svg {
-    width: 320px;
+    width: 100%;
+    height: auto;
+  }
+  @media (min-width: 768px) {
+    width: 16rem;
+    margin: 0;
   }
 `;
 
-// (未理解)使用迴圈來找出該天氣代碼對應到的天氣型態
 const weatherCode2Type = (weatherCode) => {
   const [weatherType] =
     Object.entries(weatherTypes).find(([weatherType, weatherCodes]) =>
@@ -77,9 +83,7 @@ const WeatherIcon = ({ currentWeatherCode, moment }) => {
   }, [theWeatherIcon]);
 
   return (
-    <IconContainer>
-      <IconContainer>{weatherIcons[moment][currentWeatherIcon]}</IconContainer>
-    </IconContainer>
+    <IconContainer>{weatherIcons[moment][currentWeatherIcon]}</IconContainer>
   );
 };
 

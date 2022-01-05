@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import Weather from "./Weather";
 import Todo from "./Todo";
@@ -14,9 +14,7 @@ const App = () => {
   };
 
   // 判斷目前在哪個 page
-  const isActive = (page) => {
-    return page === activePage;
-  };
+  const isActive = (page) => page === activePage;
 
   return (
     <Container>

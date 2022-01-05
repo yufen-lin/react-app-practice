@@ -1,33 +1,54 @@
 /* ./src/styles.css */
-html,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
+#root {
+  /* height: 100%; */
   width: 100%;
 }
 
-#root {
-  height: 100%;
-  width: 100%;
+* {
+  box-sizing: border-box;
 }
 
 body {
   min-height: 100vh;
-  background: #eee;
   display: flex;
   color: #333;
   background-image: linear-gradient(
-    174deg,
-    #ffd370 2%,
-    #ffd370 46%,
+    170deg,
+    #ffc753 2%,
+    #ffc753 46%,
     #ffffff 46%,
-    #ffffff 100%,
-    #e8e8e8 100%
+    #ffffff 100%
   );
   letter-spacing: 0.07em;
+  background-repeat: no-repeat;
 }
 
 ul {
   padding: 0;
+}
+
+.ant-select {
+  width: 200px;
+  font-size: 3rem;
+  margin: 1rem 0;
+}
+
+.ant-select-dropdown {
+  background-color: #fec753;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.ant-select-selection-item {
+  overflow: visible;
+}
+
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled),
+.ant-select-item-option-active:not(.ant-select-item-option-disabled) {
+  background-color: rgb(255, 255, 255, 0.4);
+}
+
+.ant-select-item-option-content {
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
 }
