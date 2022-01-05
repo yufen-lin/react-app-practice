@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/react-app-practice/static/css/main.bbf1dfef.chunk.css",
+    "main.js": "/react-app-practice/static/js/main.4768e682.chunk.js",
+    "main.js.map": "/react-app-practice/static/js/main.4768e682.chunk.js.map",
+    "runtime-main.js": "/react-app-practice/static/js/runtime-main.1ecebfec.js",
+    "runtime-main.js.map": "/react-app-practice/static/js/runtime-main.1ecebfec.js.map",
+    "static/css/2.8bd6500c.chunk.css": "/react-app-practice/static/css/2.8bd6500c.chunk.css",
+    "static/js/2.5b838114.chunk.js": "/react-app-practice/static/js/2.5b838114.chunk.js",
+    "static/js/2.5b838114.chunk.js.map": "/react-app-practice/static/js/2.5b838114.chunk.js.map",
+    "index.html": "/react-app-practice/index.html",
+    "static/css/2.8bd6500c.chunk.css.map": "/react-app-practice/static/css/2.8bd6500c.chunk.css.map",
+    "static/css/main.bbf1dfef.chunk.css.map": "/react-app-practice/static/css/main.bbf1dfef.chunk.css.map",
+    "static/js/2.5b838114.chunk.js.LICENSE.txt": "/react-app-practice/static/js/2.5b838114.chunk.js.LICENSE.txt",
+    "static/media/day-clear.8857a9c1.svg": "/react-app-practice/static/media/day-clear.8857a9c1.svg",
+    "static/media/day-cloudy-fog.0ed432d9.svg": "/react-app-practice/static/media/day-cloudy-fog.0ed432d9.svg",
+    "static/media/day-cloudy.005047ee.svg": "/react-app-practice/static/media/day-cloudy.005047ee.svg",
+    "static/media/day-fog.eb2db366.svg": "/react-app-practice/static/media/day-fog.eb2db366.svg",
+    "static/media/day-partially-clear-with-rain.6afe993a.svg": "/react-app-practice/static/media/day-partially-clear-with-rain.6afe993a.svg",
+    "static/media/day-snowing.ba1cbc76.svg": "/react-app-practice/static/media/day-snowing.ba1cbc76.svg",
+    "static/media/day-thunderstorm.c1e5aabc.svg": "/react-app-practice/static/media/day-thunderstorm.c1e5aabc.svg",
+    "static/media/icon_checked.5b498b9d.svg": "/react-app-practice/static/media/icon_checked.5b498b9d.svg",
+    "static/media/icon_delete.ee39875a.svg": "/react-app-practice/static/media/icon_delete.ee39875a.svg",
+    "static/media/icon_rain.700336bf.svg": "/react-app-practice/static/media/icon_rain.700336bf.svg",
+    "static/media/icon_refresh.a5cbf5f4.svg": "/react-app-practice/static/media/icon_refresh.a5cbf5f4.svg",
+    "static/media/icon_wind.fc0c093b.svg": "/react-app-practice/static/media/icon_wind.fc0c093b.svg",
+    "static/media/loading.f8d56fd5.svg": "/react-app-practice/static/media/loading.f8d56fd5.svg",
+    "static/media/night-clear.94eb7d67.svg": "/react-app-practice/static/media/night-clear.94eb7d67.svg",
+    "static/media/night-cloudy-fog.61304642.svg": "/react-app-practice/static/media/night-cloudy-fog.61304642.svg",
+    "static/media/night-cloudy.00520390.svg": "/react-app-practice/static/media/night-cloudy.00520390.svg",
+    "static/media/night-fog.fb9c0475.svg": "/react-app-practice/static/media/night-fog.fb9c0475.svg",
+    "static/media/night-partially-clear-with-rain.e45d055a.svg": "/react-app-practice/static/media/night-partially-clear-with-rain.e45d055a.svg",
+    "static/media/night-snowing.f00de84c.svg": "/react-app-practice/static/media/night-snowing.f00de84c.svg",
+    "static/media/night-thunderstorm.2d2eeb22.svg": "/react-app-practice/static/media/night-thunderstorm.2d2eeb22.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1ecebfec.js",
+    "static/css/2.8bd6500c.chunk.css",
+    "static/js/2.5b838114.chunk.js",
+    "static/css/main.bbf1dfef.chunk.css",
+    "static/js/main.4768e682.chunk.js"
+  ]
+}
